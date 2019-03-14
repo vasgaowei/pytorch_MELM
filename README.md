@@ -4,5 +4,7 @@ This is the pytorch implementation for the paper《Min-Entropy Latent Model for 
 
 This implementation is based [Winfrand's](https://github.com/Winfrand/MELM) torch7 version.
 # Prerequisites
-* pytorch 0.4 
-* tensorflow 1.0
+* Nivdia GPU 1080Ti
+* Ubuntu 16.04 LTS
+* pytorch **0.4** is required and we will update a new version for pytorch **1.0** soon. 
+* tensorflow **1.0**, tensorboard and tensorboardX for visualizing some results.
