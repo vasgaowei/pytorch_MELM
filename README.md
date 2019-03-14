@@ -62,3 +62,8 @@ This implementation is based [Winfrand's](https://github.com/Winfrand/MELM) torc
   $ data/selective_search_data/voc_2007_test.mat
   $ data/selective_search_data/voc_2007_trainval.mat
   ```
+# Train your own model
+  For vgg16 backbone, we can train the model using the following commands
+  ```
+  ./experiments/scripts/train_faster_rcnn.sh 0 pascal_voc vgg16
+  ```
