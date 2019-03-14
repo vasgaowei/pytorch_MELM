@@ -7,4 +7,4 @@ This implementation is based [Winfrand's](https://github.com/Winfrand/MELM) torc
 * Nivdia GPU 1080Ti
 * Ubuntu 16.04 LTS
 * pytorch **0.4** is required and we will update a new version for pytorch **1.0** soon. 
-* tensorflow **1.0**, tensorboard and [tensorboardX](https://github.com/lanpa/tensorboardX) for visualizing some results.
+* tensorflow **1.0**, tensorboard and [tensorboardX](https://github.com/lanpa/tensorboardX) for visualizing training and    validation curve.
