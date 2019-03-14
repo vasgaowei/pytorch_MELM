@@ -11,6 +11,6 @@ This implementation is based [Winfrand's](https://github.com/Winfrand/MELM) torc
 
 # Installation
 1. Clone the repository
-   ...
+   '''
    git clone https://github.com/vasgaowei/pytorch_MELM.git
-   ...
+   '''
