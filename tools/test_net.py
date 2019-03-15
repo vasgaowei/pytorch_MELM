@@ -16,7 +16,7 @@ import argparse
 import pprint
 import time, os, sys
 
-from nets.vgg16 import vgg16
+from nets.vgg16 import MELM_vgg16
 from nets.resnet_v1 import resnetv1
 from nets.mobilenet_v1 import mobilenetv1
 
@@ -113,7 +113,7 @@ if __name__ == '__main__':
 
   # load network
   if args.net == 'vgg16':
-    net = vgg16()
+    net = MELM_vgg16()
   elif args.net == 'res50':
     net = resnetv1(num_layers=50)
   elif args.net == 'res101':

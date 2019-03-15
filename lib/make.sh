@@ -13,6 +13,13 @@ cd ../../
 python build.py
 cd ../../
 
+# Build RoiRingpooling module
+cd layer_utils/roi_ring_pooling/src
+echo "Compiling roi_ring_pooling kernels by nvcc"
+nvcc -c -o roi_ring_pooling_kernel.cu.o roi_ring_pooling_kernel.cu -x cu -Xcompiler -fPIC $CUDA_ARCH 
+cd ..
+python build.py
+
 # Build RoIAlign
 cd layer_utils/roi_align/src/cuda
 echo 'Compiling crop_and_resize kernels by nvcc...'
