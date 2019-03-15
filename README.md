@@ -78,3 +78,8 @@ This implementation is based [Winfrand's](https://github.com/Winfrand/MELM) torc
   cd pytorch_MELM
   python ./tools/demo.py --net vgg16 --dataset pascal_voc
   ```
+  Also you can visualize training and validation curve.
+  ```
+  tensorboard --logdir tensorboard/vgg16/voc_2007_trainval/
+  ```
+  
