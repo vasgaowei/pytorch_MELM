@@ -2,7 +2,7 @@
 
 This is the pytorch implementation for the paper《Min-Entropy Latent Model for Weakly Supervised Object Detection》,which is a accepted paper in [CVPR2018](http://openaccess.thecvf.com/content_cvpr_2018/papers/Wan_Min-Entropy_Latent_Model_CVPR_2018_paper.pdf) and [TPAMI](https://ieeexplore.ieee.org/document/8640243). The MLEM is a novel and solid object detection framework under weakly supervised settings and attains state-of-the art performance in PASCAL VOC 2007 and PASCAL VOC 2012 datasets.
 
-This implementation is based [Winfrand's](https://github.com/Winfrand/MELM) torch7 version.
+This implementation is based [Winfrand's](https://github.com/Winfrand/MELM) torch7 version and ruotianluo's [pytorch-faster-rcnn](https://github.com/ruotianluo/pytorch-faster-rcnn).
 # Prerequisites
 * Nivdia GPU 1080Ti
 * Ubuntu 16.04 LTS
@@ -49,7 +49,7 @@ This implementation is based [Winfrand's](https://github.com/Winfrand/MELM) torc
   ```
 # Download the pre-trained ImageNet models
   Downliad the pre-trained ImageNet models from https://drive.google.com/drive/folders/0B1_fAEgxdnvJSmF3YUlZcHFqWTQ
-  and put in in the data/imagenet_weights and rename it vgg16.pth. The folder has the following form.
+  or download from  https://drive.google.com/drive/folders/1FV6ZOHOxLMQjE4ujTNOObI7lN8USH0v_?usp=sharing and put in in the     data/imagenet_weights and rename it vgg16.pth. The folder has the following form.
   ```
   $ data/imagenet_weights/vgg16.pth
   $ data/imagenet_weights/res50.pth
@@ -66,4 +66,15 @@ This implementation is based [Winfrand's](https://github.com/Winfrand/MELM) torc
   For vgg16 backbone, we can train the model using the following commands
   ```
   ./experiments/scripts/train_faster_rcnn.sh 0 pascal_voc vgg16
+  ```
+  And for test, we can using the following commands
+  ```
+  ./experiments/scripts/test_faster_rcnn.sh 0 pascal_voc vgg16
+  ```
+# Visualizing some detection results
+  I have pretrained MLEM_pytorch model on PASCAL VOC 2007 based vgg16 backbone and you can download it from              https://drive.google.com/drive/folders/1FV6ZOHOxLMQjE4ujTNOObI7lN8USH0v_?usp=sharing and put it in the
+  folder output vgg16/voc_2007_trainval/default/xxx.pth and run the following commands.
+  ```
+  cd pytorch_MELM
+  python ./tools/demo.py --net vgg16 --dataset pascal_voc
   ```
