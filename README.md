@@ -73,7 +73,7 @@ This implementation is based [Winfrand's](https://github.com/Winfrand/MELM) torc
   ```
 # Visualizing some detection results
   I have pretrained MLEM_pytorch model on PASCAL VOC 2007 based vgg16 backbone and you can download it from              https://drive.google.com/drive/folders/1FV6ZOHOxLMQjE4ujTNOObI7lN8USH0v_?usp=sharing and put it in the
-  folder output vgg16/voc_2007_trainval/default/xxx.pth and run the following commands.
+  folder output vgg16/voc_2007_trainval/default/vgg16_MELM.pth and run the following commands.
   ```
   cd pytorch_MELM
   python ./tools/demo.py --net vgg16 --dataset pascal_voc
