@@ -34,7 +34,7 @@ This implementation is based on [Winfrand's](https://github.com/Winfrand/MELM) w
 * Ubuntu 16.04 LTS
 * python **3.6**
 * pytorch **0.4** is required and we will update a new version for pytorch **1.0** soon. 
-* tensorflow **1.0**, tensorboard and [tensorboardX](https://github.com/lanpa/tensorboardX) for visualizing training and    validation curve.
+* tensorflow, tensorboard and [tensorboardX](https://github.com/lanpa/tensorboardX) for visualizing training and    validation curve.
 
 # Installation
 1. Clone the repository
@@ -57,7 +57,7 @@ This implementation is based on [Winfrand's](https://github.com/Winfrand/MELM) w
   wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtest_06-Nov-2007.tar
   wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCdevkit_08-Jun-2007.tar
   ```
-  And for PASCAL VOC 2010 and PASCAL VOC 2012, just following the similar steps.
+  
   
 2. Extract all of these tars into one directory named VOCdevkit
   ```
@@ -76,6 +76,8 @@ This implementation is based on [Winfrand's](https://github.com/Winfrand/MELM) w
   $VOCdevkit2007/VOC2007/             # VOC utility code
   $VOCdevkit2007/VOCcode/             # image sets, annodations, etc
   ```
+  And for PASCAL VOC 2010 and PASCAL VOC 2012, just following the similar steps.
+  
 # Download the pre-trained ImageNet models
   Downloa the pre-trained ImageNet models from https://drive.google.com/drive/folders/0B1_fAEgxdnvJSmF3YUlZcHFqWTQ
   or download from  https://drive.google.com/drive/folders/1FV6ZOHOxLMQjE4ujTNOObI7lN8USH0v_?usp=sharing and put in in the     data/imagenet_weights and rename it vgg16.pth. The folder has the following form.
