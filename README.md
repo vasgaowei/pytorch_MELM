@@ -58,6 +58,7 @@ This implementation is based on [Winfrand's](https://github.com/Winfrand/MELM) w
   wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCdevkit_08-Jun-2007.tar
   ```
   And for PASCAL VOC 2010 and PASCAL VOC 2012, just following the similar steps.
+  
 2. Extract all of these tars into one directory named VOCdevkit
   ```
   tar xvf VOCtrainval_06-Nov-2007.tar
