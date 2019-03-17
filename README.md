@@ -30,7 +30,7 @@ This implementation is based on [Winfrand's](https://github.com/Winfrand/MELM) w
 
 
 # Prerequisites
-* Nivdia GPU 1080Ti
+* Nvidia GPU 1080Ti
 * Ubuntu 16.04 LTS
 * python **3.6**
 * pytorch **0.4** is required and we will update a new version for pytorch **1.0** soon. 
