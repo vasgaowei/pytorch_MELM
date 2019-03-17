@@ -3,6 +3,32 @@
 This is the pytorch implementation for the paper《Min-Entropy Latent Model for Weakly Supervised Object Detection》,which is a accepted paper in [CVPR2018](http://openaccess.thecvf.com/content_cvpr_2018/papers/Wan_Min-Entropy_Latent_Model_CVPR_2018_paper.pdf) and [TPAMI](https://ieeexplore.ieee.org/document/8640243). 
 
 This implementation is based on [Winfrand's](https://github.com/Winfrand/MELM) which is the official version based on torch7 and lua. This implementation is also based on ruotianluo's [pytorch-faster-rcnn](https://github.com/ruotianluo/pytorch-faster-rcnn).
+
+# If you find MELM useful and use this code, please cite our paper:
+```
+@inproceedings{wan2018min,
+  title={Min-Entropy Latent Model for Weakly Supervised Object Detection},
+  author={Wan, Fang and Wei, Pengxu and Jiao, Jianbin and Han, Zhenjun and Ye, Qixiang},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  pages={1297--1306},
+  year={2018}
+}
+```
+```
+@article{wan2019Pami,
+  author    = {Fang Wan and 
+               Pengxu Wei and
+               Jianbin Jiao and
+               Zhenjun Han and 
+               Qixiang Ye},
+  title     = {Min-Entropy Latent Model for Weakly Supervised Object Detection},
+  journal   = {{IEEE} Trans. Pattern Anal. Mach. Intell.},
+  volume       = {DOI:10.1109/TPAMI.2019.2898858},
+  year      = {2019}
+}
+```
+
+
 # Prerequisites
 * Nivdia GPU 1080Ti
 * Ubuntu 16.04 LTS
@@ -31,6 +57,7 @@ This implementation is based on [Winfrand's](https://github.com/Winfrand/MELM) w
   wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtest_06-Nov-2007.tar
   wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCdevkit_08-Jun-2007.tar
   ```
+  And for PASCAL VOC 2010 and PASCAL VOC 2012, just following the similar steps.
 2. Extract all of these tars into one directory named VOCdevkit
   ```
   tar xvf VOCtrainval_06-Nov-2007.tar
@@ -49,7 +76,7 @@ This implementation is based on [Winfrand's](https://github.com/Winfrand/MELM) w
   $VOCdevkit2007/VOCcode/             # image sets, annodations, etc
   ```
 # Download the pre-trained ImageNet models
-  Downliad the pre-trained ImageNet models from https://drive.google.com/drive/folders/0B1_fAEgxdnvJSmF3YUlZcHFqWTQ
+  Downloa the pre-trained ImageNet models from https://drive.google.com/drive/folders/0B1_fAEgxdnvJSmF3YUlZcHFqWTQ
   or download from  https://drive.google.com/drive/folders/1FV6ZOHOxLMQjE4ujTNOObI7lN8USH0v_?usp=sharing and put in in the     data/imagenet_weights and rename it vgg16.pth. The folder has the following form.
   ```
   $ data/imagenet_weights/vgg16.pth
