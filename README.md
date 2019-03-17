@@ -101,7 +101,7 @@ This implementation is based on [Winfrand's](https://github.com/Winfrand/MELM) w
   ./experiments/scripts/test_faster_rcnn.sh 0 pascal_voc vgg16
   ```
 # Visualizing some detection results
-  I have pretrained MLEM_pytorch model on PASCAL VOC 2007 based vgg16 backbone and you can download it from              https://drive.google.com/drive/folders/1FV6ZOHOxLMQjE4ujTNOObI7lN8USH0v_?usp=sharing and put it in the
+  I have pretrained MLEM_pytorch model on PASCAL VOC 2007 based on vgg16 backbone and you can download it from              https://drive.google.com/drive/folders/1FV6ZOHOxLMQjE4ujTNOObI7lN8USH0v_?usp=sharing and put it in the
   folder output vgg16/voc_2007_trainval/default/vgg16_MELM.pth and run the following commands.
   ```
   cd pytorch_MELM
