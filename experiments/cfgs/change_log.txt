@@ -1,0 +1,48 @@
+2018/11/22/9:37
+In the vgg16.yml files, The orginal TEST.NMS value is 0.3 but changed to 0.4 for 
+implementation for WSDNN 
+
+2018/11/23/14:19
+In vgg16.yml files, the original POOLING_MODE == crop, however changed to roi_align
+for implementation for WSDNN
+
+2018/11/24/8:37
+In vgg16.yml file, the original TRAIN.WEIGHT_DECAY == 0.0001, and changed to 0.005
+Also ss_boxes whose widths or heights are less than 20 are removed
+
+2018/11/24/9:01
+In vgg16.yml files, the TRAIN.SCALES is {600,}, however changed to {480, 576, 688, 864, 1200}
+TEST.SCLAES is {688, }
+
+2018/11/24/9:23
+In vgg16.yml file, the TRAIN.MAX_SIZE is 1000, however changed to 1200
+
+2018/11/24/20:33
+In lib/datasets/pascal_voc.py, changed classes from 21 classes to 20 classes
+original:
+self._classes = ('__background__',  # always index 0
+                     'aeroplane', 'bicycle', 'bird', 'boat',
+                     'bottle', 'bus', 'car', 'cat', 'chair',
+                     'cow', 'diningtable', 'dog', 'horse',
+                     'motorbike', 'person', 'pottedplant',
+                     'sheep', 'sofa', 'train', 'tvmonitor')
+new:
+self._classes = (
+                     'aeroplane', 'bicycle', 'bird', 'boat',
+                     'bottle', 'bus', 'car', 'cat', 'chair',
+                     'cow', 'diningtable', 'dog', 'horse',
+                     'motorbike', 'person', 'pottedplant',
+                     'sheep', 'sofa', 'train', 'tvmonitor')
+In network.py, added a score_det_net
+
+In vgg16.yml file, changed TRAIN.STEPSIZE from 30000 to 60000
+
+
+2018/11/25/9:59
+In vgg16.yml, the learning rate is 0.0001, and changed to 0.0005.
+
+2018/11/26/11:14
+In vgg16.yml, the TEST.SCLAES changed from [688] to [480, 576, 688, 864, 1200]
+for multiple scale test
+
+
