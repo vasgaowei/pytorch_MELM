@@ -245,7 +245,11 @@ class Network(nn.Module):
     
     
     #caculating the loss of the first branch
+<<<<<<< HEAD
     roi_labels, roi_weights ,keep_inds = self.get_refine_supervision(det_cls_product, self._image_gt_summaries['ss_boxes'][self.ss_boxes_indexes, :],
+=======
+    roi_labels, roi_weights ,keep_inds = self.get_refine_supervision(det_cls_product, self._image_gt_summaries['ss_boxes'],
+>>>>>>> bd73dd11c938cb9256829ec3559daaab1fc77b74
                                                           self._image_gt_summaries['image_level_label'])
     
     roi_weights = torch.tensor(roi_weights).cuda()
@@ -254,7 +258,11 @@ class Network(nn.Module):
     refine_loss_1 = - torch.sum(torch.mul(roi_labels, torch.log(refine_prob_1[keep_inds]))) / roi_labels.shape[0]
     
     #caculating the loss of the second branch
+<<<<<<< HEAD
     roi_labels, roi_weights, keep_inds = self.get_refine_supervision(refine_prob_1, self._image_gt_summaries['ss_boxes'][self.ss_boxes_indexes, :],
+=======
+    roi_labels, roi_weights, keep_inds = self.get_refine_supervision(refine_prob_1, self._image_gt_summaries['ss_boxes'],
+>>>>>>> bd73dd11c938cb9256829ec3559daaab1fc77b74
                                                                      self._image_gt_summaries['image_level_label'])
     
     roi_weights = torch.tensor(roi_weights).cuda()
@@ -618,9 +626,14 @@ class Network(nn.Module):
     self._gt_boxes = torch.from_numpy(gt_boxes).to(self._device) if gt_boxes is not None else None
 
     self._mode = mode
+<<<<<<< HEAD
     
     self.ss_boxes_indexes = self.return_ss_boxes(np.arange(ss_boxes.shape[0]), mode)
     rois, cls_prob, det_prob, bbox_pred ,cls_det_prob_product ,det_cls_prob = self._predict(ss_boxes[self.ss_boxes_indexes, :])
+=======
+
+    rois, cls_prob, det_prob, bbox_pred ,cls_det_prob_product ,det_cls_prob = self._predict(ss_boxes)
+>>>>>>> bd73dd11c938cb9256829ec3559daaab1fc77b74
     
     bbox_pred = bbox_pred[:,:80]
     
@@ -630,6 +643,7 @@ class Network(nn.Module):
       self._predictions["bbox_pred"] = bbox_pred.mul(stds).add(means)
     else:
       self._add_losses() # compute losses
+<<<<<<< HEAD
       
   def return_ss_boxes(self, boxes_index, mode='TRAIN'):
         if mode == 'TEST':
@@ -638,6 +652,9 @@ class Network(nn.Module):
         indexes = np.random.choice(boxes_index, size=box_num, replace=False)
         return indexes
         
+=======
+
+>>>>>>> bd73dd11c938cb9256829ec3559daaab1fc77b74
   def init_weights(self):
     def normal_init(m, mean, stddev, truncated=False):
       """

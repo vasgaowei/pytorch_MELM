@@ -19,7 +19,11 @@ except ImportError:
   import pickle
 
 import torch
+<<<<<<< HEAD
 
+=======
+import torch.optim as optim
+>>>>>>> bd73dd11c938cb9256829ec3559daaab1fc77b74
 
 import numpy as np
 import os

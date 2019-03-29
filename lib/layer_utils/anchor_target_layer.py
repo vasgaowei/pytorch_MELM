@@ -16,7 +16,10 @@ from utils.bbox import bbox_overlaps
 from model.bbox_transform import bbox_transform
 import torch
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> bd73dd11c938cb9256829ec3559daaab1fc77b74
 def anchor_target_layer(rpn_cls_score, gt_boxes, im_info, _feat_stride, all_anchors, num_anchors):
   """Same as the anchor target layer in original Fast/er RCNN """
   A = num_anchors
