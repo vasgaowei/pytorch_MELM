@@ -6,17 +6,10 @@ CUDA_ARCH="-gencode arch=compute_30,code=sm_30 \
            -gencode arch=compute_61,code=sm_61 "
 
 # Build RoiPooling module
-<<<<<<< HEAD
 cd layer_utils/roi_pooling/src
 echo "Compiling roi_pooling kernels by nvcc..."
 nvcc -c -o roi_pooling_kernel.cu.o roi_pooling_kernel.cu -x cu -Xcompiler -fPIC $CUDA_ARCH 
 cd ..
-=======
-cd layer_utils/roi_pooling/src/cuda
-echo "Compiling roi_pooling kernels by nvcc..."
-nvcc -c -o roi_pooling_kernel.cu.o roi_pooling_kernel.cu -x cu -Xcompiler -fPIC $CUDA_ARCH 
-cd ../../
->>>>>>> bd73dd11c938cb9256829ec3559daaab1fc77b74
 python build.py
 cd ../../
 
