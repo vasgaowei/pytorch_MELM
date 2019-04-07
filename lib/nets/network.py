@@ -245,7 +245,7 @@ class Network(nn.Module):
     
     
     #caculating the loss of the first branch
-    roi_labels, roi_weights ,keep_inds = self.get_refine_supervision(det_cls_product, self._image_gt_summaries['ss_boxes'],
+    roi_labels, roi_weights ,keep_inds = self.get_refine_supervision(det_cls_product, self._image_gt_summaries['ss_boxes'][self.ss_boxes_indexes, :],
                                                                      self._image_gt_summaries['image_level_label'])
     
     roi_weights = torch.tensor(roi_weights).cuda()
@@ -254,7 +254,7 @@ class Network(nn.Module):
     refine_loss_1 = - torch.sum(torch.mul(roi_labels, torch.log(refine_prob_1[keep_inds]))) / roi_labels.shape[0]
     
     #caculating the loss of the second branch
-    roi_labels, roi_weights, keep_inds = self.get_refine_supervision(refine_prob_1, self._image_gt_summaries['ss_boxes'],
+    roi_labels, roi_weights, keep_inds = self.get_refine_supervision(refine_prob_1, self._image_gt_summaries['ss_boxes'][self.ss_boxes_indexes, :],
                                                                      self._image_gt_summaries['image_level_label'])
     
     roi_weights = torch.tensor(roi_weights).cuda()
