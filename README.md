@@ -4,6 +4,8 @@ This is a simplified version of MELM with context in pytorch for the paper《Min
 
 This implementation is based on [Winfrand's](https://github.com/Winfrand/MELM) which is the official version based on torch7 and lua. This implementation is also based on ruotianluo's [pytorch-faster-rcnn](https://github.com/ruotianluo/pytorch-faster-rcnn).
 
+**And trained on PASCAL_VOC 2007 trainval and tested on PASCAL_VOC test with VGG16 backbone, I got a better performance mAP 47.98**
+
 # If you find MELM useful and use this code, please cite our paper:
 ```
 @inproceedings{wan2018min,
