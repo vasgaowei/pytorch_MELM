@@ -36,7 +36,7 @@ This implementation is based on [Winfrand's](https://github.com/Winfrand/MELM) w
 * Nvidia GPU 1080Ti
 * Ubuntu 16.04 LTS
 * python **3.6**
-* pytorch **0.4** is required and we will update a new version for pytorch **1.0** soon. 
+* pytorch **0.4** is required. For pytorch **1.0** or higher version, please go to the **pytorch1.0** version.
 * tensorflow, tensorboard and [tensorboardX](https://github.com/lanpa/tensorboardX) for visualizing training and    validation curve.
 
 # Installation
