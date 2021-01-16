@@ -55,38 +55,36 @@ if __name__ == '__main__':
         description="Weakly Supervised Obejct Detection",
         packages=find_packages(exclude=("cfgs", "tools")),
         ext_modules=[
-# =============================================================================
-#             make_cython_ext(
-#                 name='soft_nms_cpu',
-#                 module='ops.nms',
-#                 sources=['src/soft_nms_cpu.pyx']),
-#             make_cuda_ext(
-#                 name='nms_cpu',
-#                 module='ops.nms',
-#                 sources=['src/nms_cpu.cpp']),
-#             make_cuda_ext(
-#                 name='nms_cuda',
-#                 module='ops.nms',
-#                 sources=['src/nms_cuda.cpp', 'src/nms_kernel.cu']),
-#             make_cuda_ext(
-#                 name='roi_align_cuda',
-#                 module='ops.roi_align',
-#                 sources=['src/roi_align_cuda.cpp', 'src/roi_align_kernel.cu']),
-#             make_cuda_ext(
-#                 name='roi_pool_cuda',
-#                 module='ops.roi_pool',
-#                 sources=['src/roi_pool_cuda.cpp', 'src/roi_pool_kernel.cu']),
-#             make_cuda_ext(
-#                     name='roi_crop_cpu',
-#                     module='ops.roi_crop',
-#                     sources=['src/roi_crop_cpu.cpp']
-#                     ),
-#             make_cuda_ext(
-#                     name='roi_crop_cuda',
-#                     module='ops.roi_crop',
-#                     sources=['src/roi_crop_cuda.cpp', 'src/roi_crop_kernel.cu']
-#                     ),
-# =============================================================================
+             make_cython_ext(
+                 name='soft_nms_cpu',
+                 module='ops.nms',
+                 sources=['src/soft_nms_cpu.pyx']),
+             make_cuda_ext(
+                 name='nms_cpu',
+                 module='ops.nms',
+                 sources=['src/nms_cpu.cpp']),
+             make_cuda_ext(
+                 name='nms_cuda',
+                 module='ops.nms',
+                 sources=['src/nms_cuda.cpp', 'src/nms_kernel.cu']),
+             make_cuda_ext(
+                 name='roi_align_cuda',
+                 module='ops.roi_align',
+                 sources=['src/roi_align_cuda.cpp', 'src/roi_align_kernel.cu']),
+             make_cuda_ext(
+                 name='roi_pool_cuda',
+                 module='ops.roi_pool',
+                 sources=['src/roi_pool_cuda.cpp', 'src/roi_pool_kernel.cu']),
+             make_cuda_ext(
+                     name='roi_crop_cpu',
+                     module='ops.roi_crop',
+                     sources=['src/roi_crop_cpu.cpp']
+                     ),
+             make_cuda_ext(
+                     name='roi_crop_cuda',
+                     module='ops.roi_crop',
+                     sources=['src/roi_crop_cuda.cpp', 'src/roi_crop_kernel.cu']
+                     ),
             make_cuda_ext(
                     name='roi_ring_pool_cuda',
                     module='ops.roi_ring_pool',
