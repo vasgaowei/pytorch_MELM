@@ -91,7 +91,7 @@ class SolverWrapper(object):
 
   def from_snapshot(self, sfile, nfile):
     print('Restoring model snapshots from {:s}'.format(sfile))
-    self.net.load_state_dict(torch.load(str(sfile)))
+    self.net.load_state_dict(torch.load(str(sfile), weights_only=True))
     print('Restored.')
     # Needs to restore the other hyper-parameters/states for training, (TODO xinlei) I have
     # tried my best to find the random states so that it can be recovered exactly
